@@ -1,3 +1,15 @@
+# Hamochi Notes
+1. Clone the PosFormer repository and set up a Python environment.
+1. Install all required dependencies from the provided requirements.txt.
+1. Download or place the pre-trained PosFormer checkpoint into the project’s checkpoint folder.
+1. Verify that local inference works by running the repo’s sample inference script with the checkpoint.
+1. Create a separate folder (e.g., api/) to hold your API wrapper.
+1. Write a wrapper class that loads the model once and exposes a function to return LaTeX predictions from stroke input.
+1. Set up a FastAPI (or Flask) server that defines an endpoint /recognize which accepts stroke data in JSON and returns LaTeX output.
+1. Add CORS middleware if you plan to call the API from a browser or front-end app.
+1. Start the server using Uvicorn (or equivalent) and test with a POST request containing stroke data.
+1. (Optional) Dockerize the whole setup for easy deployment.
+
 # PosFormer
 
 <h3 align="center"> <a href="https://arxiv.org/abs/2407.07764">PosFormer: Recognizing Complex Handwritten Mathematical Expression with Position Forest Transformer</a></h3>
